@@ -1,4 +1,4 @@
-package br.com.redventures.ramen_go.model;
+package br.com.redventures.ramengo.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -9,7 +9,6 @@ import lombok.Setter;
 @Setter
 @Table(name= "tblBroth")
 public class Broth {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID")

@@ -1,6 +1,6 @@
-package br.com.redventures.ramen_go.repository;
+package br.com.redventures.ramengo.repository;
 
-import br.com.redventures.ramen_go.model.Broth;
+import br.com.redventures.ramengo.model.Broth;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

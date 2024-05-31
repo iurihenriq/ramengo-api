@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ramen-go
+    name: ramengo-api
   main:
     allow-bean-definition-overriding: true
   datasource:
@@ -25,7 +25,7 @@ api:
   key:
     header:
       name: x-api-key
-    value: ZtVdh8XQ2U8pWI2gmZ7f796Vh8GllXoN7mr0djNf
+    value: 5a7f8b94e1c044b2b4f89996a38a2d73
 external-api:
   url: https://api.tech.redventures.com.br
   key:

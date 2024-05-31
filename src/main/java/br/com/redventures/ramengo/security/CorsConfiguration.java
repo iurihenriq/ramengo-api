@@ -1,4 +1,4 @@
-package br.com.redventures.ramen_go.security;
+package br.com.redventures.ramengo.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

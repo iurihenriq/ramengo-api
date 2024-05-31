@@ -1,14 +1,12 @@
-package br.com.redventures.ramen_go.model;
+package br.com.redventures.ramengo.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-@Builder
 @Getter
 @Setter
 @Entity

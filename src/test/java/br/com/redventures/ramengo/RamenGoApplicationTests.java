@@ -1,4 +1,4 @@
-package br.com.redventures.ramen_go;
+package br.com.redventures.ramengo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
