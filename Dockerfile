@@ -1,17 +1,18 @@
 FROM openjdk:21-jdk-slim AS builder
 
-RUN apt-get update && apt-get install -y bash
+RUN apt-get update && apt-get install -y bash dos2unix
 
 WORKDIR /app
 
-COPY gradlew gradlew
-COPY gradle gradle
-COPY build.gradle settings.gradle /app/
-COPY src /app/src
+COPY . .
 
-RUN chmod +x gradlew
+RUN if [ ! -f ./gradlew ]; then echo "gradlew not found"; exit 1; fi
 
-RUN ./gradlew clean build
+RUN dos2unix ./gradlew
+
+RUN chmod +x ./gradlew
+
+RUN ./gradlew clean build -x test
 
 FROM openjdk:21-jdk-slim
 
@@ -21,4 +22,4 @@ COPY --from=builder /app/build/libs/ramengo-api-0.0.1-SNAPSHOT.jar /app/app.jar
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
