@@ -14,15 +14,13 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/order")
+@RequestMapping("/orders")
 public class OrderController {
 
     private final OrderService orderService;
-    private final ObjectMapper objectMapper;
 
     @PostMapping
-    public ResponseEntity<OrderDTO> placeOrder(@RequestBody String orderStr) throws JsonProcessingException {
-        OrderForm order = objectMapper.readValue(orderStr, OrderForm.class);
+    public ResponseEntity<OrderDTO> placeOrder(@RequestBody OrderForm order) {
         if ((order.proteinId() == null || order.proteinId().isEmpty()) ||
                 (order.brothId() == null) || order.brothId().isEmpty())
             throw new MissingIdsException();
