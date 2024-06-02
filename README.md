@@ -16,6 +16,8 @@ The RamenGo API is hosted on the Render platform at [https://ramengo-api-atqt.on
   - [List Proteins](#list-proteins)
   - [Place Order](#place-order)
 - [Error Handling](#error-handling)
+- [License](#license)
+- [Contact](#contact)
 
 ## API Documentation
 
