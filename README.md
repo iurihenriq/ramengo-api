@@ -2,15 +2,9 @@
 
 Welcome to the RamenGo API! This project is a RESTful API built with Java 21, Spring Boot, Gradle, and H2 Database. The purpose of this API is to provide endpoints for listing available broths and proteins, and to allow users to place orders for their custom ramen dishes.
 
-## API Host and Authentication
-
-The RamenGo API is hosted on the Render platform at [https://ramengo-api-atqt.onrender.com](https://ramengo-api-atqt.onrender.com). Please note that it is currently using a free plan, which may result in latency in API responses. To access the API endpoints, you need to include the API key in the request header:
-
-- **Header:** `x-api-key`
-- **Value:** `5a7f8b94e1c044b2b4f89996a38a2d73`
-
 ## Table of Contents
 
+- [Deployment and Authentication](#deployment-and-authentication)
 - [API Documentation](#api-documentation)
   - [List Broths](#list-broths)
   - [List Proteins](#list-proteins)
@@ -18,6 +12,13 @@ The RamenGo API is hosted on the Render platform at [https://ramengo-api-atqt.on
 - [Error Handling](#error-handling)
 - [License](#license)
 - [Contact](#contact)
+
+## Deployment and Authentication
+
+The RamenGo API is hosted on the Render platform at [https://ramengo-api-atqt.onrender.com](https://ramengo-api-atqt.onrender.com). Please note that it is currently using a free plan, which may result in latency in API responses. To access the API endpoints, you need to include the API key in the request header:
+
+- **Header:** `x-api-key`
+- **Value:** `5a7f8b94e1c044b2b4f89996a38a2d73`
 
 ## API Documentation
 
