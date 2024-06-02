@@ -12,8 +12,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
@@ -40,12 +38,12 @@ public class OrderService {
 
 
     public OrderDTO placeOrder(OrderForm order) {
-        Optional<Protein> protein = proteinService.findById(order.proteinId());
-        Optional<Broth> broth = brothService.findById(order.brothId());
+        Protein protein = proteinService.findById(order.proteinId()).orElseThrow(OrderPlacementException::new);
+        Broth broth = brothService.findById(order.brothId()).orElseThrow(OrderPlacementException::new);
 
         String orderId = getOrderId().orderId();
-        String description = broth.get().getName() + " and " + protein.get().getName() + " Ramen";
-        String image = "https://tech.redventures.com.br/icons/ramen/ramen" + protein.get().getName() + ".png";
+        String description = broth.getName() + " and " + protein.getName() + " Ramen";
+        String image = "https://tech.redventures.com.br/icons/ramen/ramen" + protein.getName() + ".png";
 
         return OrderDTO.builder()
                 .id(orderId)
